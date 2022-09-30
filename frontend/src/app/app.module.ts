@@ -12,12 +12,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { ProdutosListaComponent } from './produtos/produtos-lista/produtos-lista.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    ProdutosComponent
+    ProdutosComponent,
+    ProdutosListaComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,10 @@ import { ProdutosComponent } from './produtos/produtos.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
