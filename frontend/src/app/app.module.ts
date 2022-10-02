@@ -16,13 +16,32 @@ import { ProdutosListaComponent } from './produtos/produtos-lista/produtos-lista
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { ProdutosFormComponent } from './produtos/produtos-form/produtos-form.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CategoriasComponent } from './categorias/categorias.component';
+import { CategoriasListaComponent } from './categorias/categorias-lista/categorias-lista.component';
+import { CategoriasFormComponent } from './categorias/categorias-form/categorias-form.component';
+import { TamanhosComponent } from './tamanhos/tamanhos.component';
+import { TamanhosListaComponent } from './tamanhos/tamanhos-lista/tamanhos-lista.component';
+import { TamanhosFormComponent } from './tamanhos/tamanhos-form/tamanhos-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     ProdutosComponent,
-    ProdutosListaComponent
+    ProdutosListaComponent,
+    ProdutosFormComponent,
+    CategoriasComponent,
+    CategoriasListaComponent,
+    CategoriasFormComponent,
+    TamanhosComponent,
+    TamanhosListaComponent,
+    TamanhosFormComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +55,12 @@ import { MatSortModule } from '@angular/material/sort';
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

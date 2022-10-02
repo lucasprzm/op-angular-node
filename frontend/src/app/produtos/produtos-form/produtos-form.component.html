@@ -1,0 +1,58 @@
+<form [formGroup]="produtosForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Cadastro de Produtos</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Nome" formControlName="nome">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Categoria" formControlName="categoria">
+              <mat-option value="c">Categorias</mat-option>
+            </mat-select>
+            <mat-error *ngIf="produtosForm.controls['categoria'].hasError('required')">
+              Favor preencher <strong>categoria</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select multiple>
+              <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="produtosForm.controls['tamanhos'].hasError('required')">
+              Favor preencher <strong>tamanho(s)</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input type="number" matInput placeholder="Valor" formControlName="valor"/>
+            <mat-error *ngIf="produtosForm.controls['valor'].hasError('required')">
+              Favor preencher <strong>valor</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="Descrição" formControlName="descricao"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

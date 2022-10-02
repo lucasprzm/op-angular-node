@@ -1,0 +1,22 @@
+<form [formGroup]="produtosForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Cadastro de Categorias</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Nome" formControlName="nome">
+            <mat-error *ngIf="produtosForm.controls['nome'].hasError('required')">
+              Favor preencher <strong>nome</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
