@@ -10,7 +10,7 @@ export default class Categoria extends BaseModel {
   public nome: string
 
   @hasMany(() => Produto)
-  public produto: HasMany<typeof Produto>
+  public produtos: HasMany<typeof Produto>
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

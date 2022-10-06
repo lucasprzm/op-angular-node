@@ -27,7 +27,7 @@ export default class TamanhosController {
 
     await tamanho.save();
 
-    return `Tamanho atualizada com sucesso!`
+    return "Tamanho atualizado com sucesso!"
   }
 
   public async destroy({params}: HttpContextContract) {

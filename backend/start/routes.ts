@@ -22,3 +22,4 @@ import Route from '@ioc:Adonis/Core/Route'
 
 Route.resource('categorias', 'CategoriasController').apiOnly();
 Route.resource('tamanhos', 'TamanhosController').apiOnly();
+Route.resource('produtos', 'ProdutosController').apiOnly();
